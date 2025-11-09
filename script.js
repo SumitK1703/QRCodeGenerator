@@ -15,8 +15,20 @@ form.addEventListener('submit', function(e) {
     qrcodeContainer.innerHTML = '<p>Generating...</p>';
     downloadBtn.hidden = true; // Hide download button
 
+    // --- NEW: Options for the QR code ---
+    const options = {
+        width: 200,
+        margin: 2,
+        color: {
+            dark: '#e0e0e0',  // Color of the dots (light gray)
+            light: '#1e1e1e' // Background color (matching the card)
+        }
+    };
+    // ------------------------------------
+
     // Generate the QR code as a canvas
-    QRCode.toCanvas(url, { width: 200, margin: 2 }, function (error, canvas) {
+    // --- UPDATED: Pass the new 'options' object ---
+    QRCode.toCanvas(url, options, function (error, canvas) {
         qrcodeContainer.innerHTML = ''; // Clear "Generating..."
         if (error) {
             console.error(error);

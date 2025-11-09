@@ -7,8 +7,10 @@
 
 body {
     font-family: 'Poppins', Arial, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+    /* Dark theme background */
+    background-color: #121212;
+    /* Light theme text */
+    color: #e0e0e0;
     /* Center everything on the page */
     display: grid;
     place-items: center;
@@ -18,10 +20,12 @@ body {
 
 /* Main container card */
 .container {
-    background: #ffffff;
+    /* Dark card background */
+    background: #1e1e1e;
     padding: 2rem 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    /* Adjusted shadow for dark background */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 420px;
     text-align: center;
@@ -29,12 +33,14 @@ body {
 
 h2 {
     margin-bottom: 0.5rem;
-    color: #111;
+    /* Brighter text for heading */
+    color: #ffffff;
 }
 
 .subtitle {
     margin-bottom: 1.5rem;
-    color: #555;
+    /* Muted text color for dark theme */
+    color: #a0a0a0;
     font-size: 0.95rem;
 }
 
@@ -48,7 +54,12 @@ form {
 input[type="url"] {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ddd;
+    /* Dark input background */
+    background-color: #252525;
+    /* Light input text */
+    color: #e0e0e0;
+    /* Darker border */
+    border: 1px solid #444;
     border-radius: 8px;
     font-size: 1rem;
     font-family: inherit;
@@ -56,8 +67,9 @@ input[type="url"] {
 
 input[type="url"]:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+    /* Brighter accent color */
+    border-color: #0084ff;
+    box-shadow: 0 0 0 3px rgba(0, 132, 255, 0.2);
 }
 
 /* Button styling */
@@ -73,53 +85,23 @@ button {
 }
 
 button.primary {
-    background-color: #007bff;
+    /* Brighter primary color */
+    background-color: #0084ff;
     color: white;
 }
 
 button.primary:hover {
-    background-color: #0056b3;
+    background-color: #006bcf;
 }
 
 button.secondary {
-    background-color: #f0f0f0;
-    color: #333;
+    /* Dark secondary button */
+    background-color: #333;
+    color: #e0e0e0;
 }
 
 button.secondary:hover {
-    background-color: #e0e0e0;
+    background-color: #444;
 }
 
 /* QR Code container */
-#qrcode-container {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border: 1px dashed #ccc;
-    border-radius: 8px;
-    min-height: 220px; /* Reserve space */
-    display: grid;
-    place-items: center;
-}
-
-/* This is where the canvas will go */
-#qrcode-container canvas {
-    max-width: 100%;
-    height: auto;
-}
-
-#qrcode-container p {
-    color: #888;
-}
-
-/* Utility class for accessibility */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
