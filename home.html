@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h2>QR Code Generator</h2>
+        <p class="subtitle">Enter any URL to create a shareable QR code.</p>
+        
+        <form id="qrForm">
+            <label for="urlInput" class="visually-hidden">Enter URL</label>
+            <input type="url" id="urlInput" placeholder="https://www.example.com" required>
+            <button type="submit" class="primary">Generate QR Code</button>
+        </form>
+        
+        <div id="qrcode-container">
+            <p>Your QR code will appear here</p>
+        </div>
+        
+        <button type="button" id="downloadBtn" class="secondary" hidden>
+            Download QR
+        </button>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <script src="script.js" defer></script>
+
+</body>
+</html>
